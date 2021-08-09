@@ -1,0 +1,128 @@
+
+
+1. SELECT ename
+FROM emp
+WHERE job LIKE 'CLERK';
+
+2. SELECT ename
+FROM emp
+WHERE job IN('CLERK','MANAGER');
+
+3. SELECT DATE('now');
+
+4.SELECT ename 
+FROM emp
+WHERE sal >500 AND sal<1000;
+
+5. SELECT ename
+FROM emp
+WHERE hiredate LIKE '%DEC%';
+
+6. SELECT ename 
+FROM emp
+WHERE sal>2500 OR sal<1000;
+
+7. SELECT ename 
+FROM emp
+WHERE sal IN('800','950','3000','500');
+
+8. SELECT ename 
+FROM emp
+WHERE ename LIKE '_L%';
+
+9. SELECT ename 
+FROM emp
+WHERE ename LIKE '%D';
+
+10. SELECT ename 
+FROM emp
+WHERE LENGTH(ename) =5;
+
+11. SELECT ename
+FROM emp
+WHERE ename LIKE 'T%R';
+
+12. SELECT ename
+FROM emp
+WHERE ename LIKE '%A%';
+
+
+14. SELECT empno
+FROM emp
+WHERE ename LIKE 'JAMES';
+
+15. SELECT sal
+FROM emp
+WHERE ename LIKE 'king';
+
+16. SELECT ename
+FROM emp
+WHERE job LIKE 'president';
+
+17. SELECT *
+FROM emp
+WHERE job LIKE 'manager';
+
+18. SELECT *
+FROM emp
+WHERE comm IS NOT NULL;
+
+19. SELECT ename,job,hiredate
+FROM emp
+WHERE hiredate LIKE '%MAR%81' OR hiredate LIKE '%MAR%80' OR hiredate LIKE '%FEB%81' OR hiredate LIKE '%FEB%80' OR hiredate LIKE '%JAN%81' OR hiredate LIKE '%JAN%80';
+
+20. SELECT ename,sal
+FROM emp
+WHERE ename IN('KING','BLAKE','FORD','SMITH');
+
+21. SELECT ename
+FROM emp
+WHERE sal <3500;
+
+22. SELECT *
+FROM emp
+WHERE job LIKE 'clerk';
+
+23. SELECT ename, sal*12 AS ANN_SAL
+FROM emp;
+
+24. SELECT sal*1.2 AS HIKE_SAL
+FROM emp
+WHERE ename LIKE 'FORD';
+
+25. SELECT sal, d.dname
+FROM emp e, dept d
+WHERE e.deptno= d.deptno
+GROUP BY d.dname;
+
+26. SELECT ename, MIN(sal) as SALARY
+FROM emp
+WHERE deptno='10';
+
+27. SELECT ROUND(AVG(sal),2) AS AVG_SAL
+FROM emp
+WHERE job LIKE 'MANAGER';
+
+28. SELECT SUM(sal) AS TOT_SAL
+FROM emp
+WHERE job LIKE 'SALESMAN';
+
+29. 
+
+30. SELECT job,COUNT(*) AS People
+FROM emp
+GROUP BY job;
+
+31. SELECT MAX(sal) AS MAX_SAL
+FROM emp
+WHERE job LIKE 'ANALYST';
+
+32. SELECT MAX(comm) COMM_MAX
+FROM emp;
+
+33. SELECT COUNT(DISTINCT(deptno)) AS TOT_DEP
+FROM dept;
+
+34. SELECT ename
+FROM emp
+WHERE ename LIKE '__L%';
